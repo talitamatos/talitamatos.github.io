@@ -1,0 +1,343 @@
+/*REGRA SEMPRE NA PRIMEIRA LINHA*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');/*REGRA DE FONTE*/
+
+
+
+/*FORMATANDO CABEÇALHO*/
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px; /* se a unidade em medida fosse em ponto, que corresponde a 0,75 px, então aqui seriam 12pt. 16*0,75=12pt*/
+    /*scroll-behavior: smooth; pra fazer uma suave rolagem ao inves de ir direto
+    }*/
+
+    scroll-behavior: smooth ;
+    }
+ 
+   
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #444;
+
+    /*font-size: 2em;/*200% estou dizendo que a fonte é o dobro do pai*/
+    
+}
+
+main{
+    font-size: 2em;/*Veja, nesse caso, estou dizendo que o main é o dobro do pai dele, que agora é o body...4x maior do que o font-size do html todo*/
+}
+
+/* O MAIS INDICADO: Ainda sobre medidas, se eu colocar por exemplo aqui em main, 2rem, então estou falando que sao 200% em relação ao elemento raíz, que nesse caso é o html{}*/
+
+/*RESUMO: UNIDADE DE MEDIDAS RELATIVAS
+% - Se colocar 200%, teremos o dobro de 16px, ou seja, 32px.
+EM- funciona como porcentagem, so que inves de 200%, declaro 2.0em, e sempre se refere ao elemento pai (elemento anterior ao qual ele pertence, tipo um jogo de potes (um dentro do outro)
+REM- Same as "EM" but it refers to the root rule.*/
+
+img, iframe, video{/*com max-width eu digo que independente da tela, ele nao passa de 100%*/
+    max-width: 100%;
+    /*max-height: 100%;*/
+}
+
+
+
+p{
+    font-size: 1.2rem;/*120% do tamanho da raiz, um pouco maior que a raiz */
+    line-height: 1.6rem;/* espaço entre as linhas*/
+}
+
+h2{
+    font-size: 2.0rem;
+    text-align: center;
+}
+
+header{
+    text-align: center; /*ele alinha tudo. texto, imagem, video, tudo*/
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    display: inline;
+   
+}
+
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #3b90f0;
+    display: inline-block;/*pra funcionar o width, tem que mudar o display aqui pra inline-block*/
+    width: 25%; /*caso esteja quebrando o menu, é pq tem espaços no html entre os "li", junte todos na mesma linha*/
+    font-size: 1.3rem;
+    line-height: 3.0rem;/*altura da linha*/
+    transition: 0.3s; /*transição do marcatexto da barra*/
+}
+
+nav a:hover, nav a:active{/*hover pra mouse e active pra dedo*/
+    background-color: #3b90f0;/*cor da caixinha*/
+    color: #fff;/*cor da letra quando a caixinha estiver selecionada*/
+
+}
+
+
+
+/*FORMATANDO ÁREA DE DESTAQUE*/
+
+.destaque{
+    background-image: url(imagens/imagem-destaque-fundo.jpg);/*se não declarar a altura, a altura será a do conteúdo*/
+    height: 70vh;/*esse vh é de viewport height, estou dizendo que vou usar 70% de sua tela, independente de qual porta ela for...o VW é a largura relativa ao device too.*/
+    display: table; /* forma 2 de centralizar parte 1/2*/
+    width: 100%;
+
+
+}
+
+.container{
+
+    background-color: rgba(0, 0, 0, .6);
+    height: 70vh;
+    /*UMA FORMA DE ALINHAR O TEXTO DO CENTRO É: 
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+    display: table-cell;/*forma 2de centralizar parte2/2*/
+    vertical-align: middle;
+
+ 
+
+}
+
+.fundo-texto{
+
+    background-color: rgba(255, 255, 255, .8);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+
+
+}
+
+.destaque h1{
+    color: #df1a9c;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+.destaque p{
+    font-size: 1.8rem;
+    color: #3b90f0;
+
+}
+
+.fundo-cta{
+    background-color: #df1a9c;
+}
+
+.cta{
+
+    max-width: 1200px;
+    margin: 0 auto;/* alinha o elemento ao centro da tela horizontalmente*/
+    text-align: center;/*alinha o elemento a ele mesmo*/
+
+    /* NUNCA DEFINA ALTURA AQUI PQ SENÃO CAGA A RESPONSIVIDADE, SE QUISER MEXER MEXE NO PADDING 50PX O*/
+
+}
+
+.cta p{
+    margin: 0; /*GRUDA NO ELEMENTO ANTERIOR, TIRA O ESPAÇAMENTO*/
+    padding: 10px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+main{
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.imagens{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+
+.imagens img{
+    max-width: 30%;/*reduzindo a imagem no css, eu perco performance, pq ela continua pesada*/
+    margin-top: 14px;
+}
+
+.fundo-video{
+    background-image: url(imagens/fundo-madeira.jpg);
+
+}
+.video{
+    max-width: 1200px;/*todos os elementos no mesmo tamanho*/
+    margin: 0 auto;/*altura fixa e lados responsivos*/
+    text-align: center;
+    padding: 30px 0;
+}
+
+.video h2{
+color: white;
+}
+
+.fundo-rodape{
+    background-color: #333;
+    border-bottom: deepskyblue 8px solid;
+
+}
+
+/*Formatando o rodapé*/
+
+footer{
+    color: #999;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 6px 0;
+}
+
+/*Formatando o formulário*/
+
+.fundo-form{
+    background: url(imagens/fundo-contato.jpg) center;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.formulario{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, .8);
+    padding: 20px;
+}
+
+.formulario label{/*Se eu tivesse outro label, nao afetaria, so o de formulario*/
+    display: flex;
+}
+
+.formulario input, .formulario textarea{
+    display: flex;/*estou dizendo pra quebrar*/
+    width: 100%;/*estou dizendo pra ocupar de ponta a ponta*/
+    padding: 10px;/*aqui dei um respiro do texto digitado pra borda*/
+    margin-bottom: 15px;
+  
+}
+
+.formulario input:hover, .formulario input:active, .formulario textarea:hover, .formulario textarea:active{/*Aqui dou uma sombra pra o usuário saber quando estiver nesse campo. realce*/
+    background-color: #3b8ff022;
+
+}
+
+/*.formulario textarea{
+    font-family: 'Courier New', Courier, monospace;
+} SE QUISER MUDAR FONTE DO PLACEHOLDER É AQUI*/
+
+.enviar{/*fazer o botão*/
+
+    background: #3b90f0;
+    color: #fff;
+    padding: 10px 60px;
+    border: 1px solid #3b90f0;
+    transition: all 0.5s;
+
+}
+
+.enviar:hover, .enviar:active{
+    background: #fff;
+    color: #3b90f0;
+    border: 1px solid #3b90f0;
+}
+
+/*Quando a tela for maior que 700px*/
+
+@media screen and (min-width:700px){
+   /* body{
+        background-color: salmon;
+    }Apenas testando se deu. Mobile ta branco e maior ta salmon*/
+
+    header{
+        max-width: 1200px; /* limite o tamanho do container */
+        margin: 0 auto; /* centraliza */
+        display: flex; /* transforma os elementos deste container em flex, ou seja, deixa de ser display block por padrão */
+        justify-content: space-between; /* coloca um elemento de cada lado, igualando o espaço entre eles */
+        align-items: center; /* alinha os elementos verticalmente */
+        flex-wrap: wrap; /* evita que os itens estourem o container */
+        }
+        .logo{
+            width: 20%;
+            
+        }
+
+        nav{
+            width: 60%;
+        }
+       
+
+        .formulario label{
+            display: none;
+        }
+
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .formulario input{
+            width: 31%;
+        }
+        
+
+
+    }
+
+    @media screen and (min-width:1000px){
+
+        .logo{
+            width: 20%;
+        }
+        
+    }
+
+    .ajuste{/*referente ao slider, para centralizar as imagens*/
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .videoresponsivo {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        margin:30px 20px;
+    }
+
+    .videoresponsivo iframe {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+
+    
+
+
+
+
+
+
+
