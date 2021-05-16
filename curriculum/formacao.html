@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    
+    
+    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">      
+ 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    
+</head>
+<body >
+         
+      <div class="sticky-top">  <!--Classe sticky-top para o menu não rolar com o conteúdo da página. Ele está englobando todo o menu de navegação -->
+
+        <!-- Aqui é o botão de três linhas(menu)-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">  
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Fim do botão de três linhas -->
+
+            <!-- Início do logotipo -->
+            <div class="navbar navbar-light  zindex-fixed">
+              <a class="navbar-brand" href="curriculum.html">
+                <img src="img/Logo Cinza e Laranja de Fotografia (1).png" width="60" height="60" class="d-inline-block align-center" alt="">
+                Talita Matos
+               </a>
+            </div>
+               <!-- Fim do logotipo -->
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
+              <ul class="navbar-nav" >
+                <li class="nav-item ">
+                  <a class="nav-link" href="curriculum.html" >Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="experiencias.html">Experiências</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="formacao.html">Formação Acadêmica</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="certificados.html">Certificados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatos.html">Contatos</a>
+                </li>
+                <li class="btn-group dropleft">
+                    <a class="nav-link dropdown-toggle" href="mais.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Mais</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#xpv">Experiências de voluntariado</a>
+                    <a class="dropdown-item" href="#cursos">Cursos</a>
+                    <a class="dropdown-item" href="#idiomas">Idiomas falados</a>
+                    </div>
+        
+               </ul>
+          </div>
+      </div>
+      
+        </nav>
+   
+      
+          
+      <article>
+
+       
+        
+      <div class="container">
+            
+        <div class="row">
+          <div class="col-4" >
+            <div class="hljs" >
+
+              <p>Pontifícia Universidade Católica de Minas Gerais</p>
+              <p>Diploma Pós-graduação Lato Sensu - Especialização</p>
+              <p>Área de estudo: Engenharia de Software</p>
+              <p> Cursando. Término previsto para 2022 </p>
+          
+            </div>
+          </div> 
+
+          <div class="w-100"></div>
+          
+          <div class="col-4 offset-md-4">
+
+            <div class="hljs" >
+
+              
+              <p>Faculdades Metropolitanas Unidas</p>
+              
+              <p>Área de estudo: Negócios Internacionais e Comércio Exterior</p>
+              
+              <p>2018 – 2020</p>
+               
+          
+            </div>
+          
+          </div>
+
+
+          <div class="w-100"></div>
+
+          <div class="col-4 offset-md-8 ">
+
+            <div class="hljs" >
+
+             
+              <p>Centro Universitário Belas Artes de São Paulo</p>
+
+              <p>Diploma Bacharelado em Design de Moda</p>
+
+              <p>2014 – 2015</p>
+
+          
+            </div>
+          
+          </div>
+        
+
+      </div>
+      </div>
+      
+      </article>      
+          
+
+
+                
+       
+        
+       
+        
+        
+     
+
+         
+      
+         
+
+      
+
+
+
+  
+
+
+    <footer style="text-align: center; background-color: cornflowerblue;">&copy;CV Talita - 2021</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+
+      var artigos = document.querySelectorAll ("article");
+      for( var i=0; i< artigos.length; i++){
+        artigos[i].setAttribute("data-aos", "fade-up", "data-aos-duration", "5000");
+      }
+
+     
+
+      AOS.init();
+    </script>
+    
+    </body>
+    </html>

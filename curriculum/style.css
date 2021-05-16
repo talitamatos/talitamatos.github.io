@@ -1,0 +1,40 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway&display=swap');
+
+html{
+    scroll-behavior: smooth;
+} 
+
+body{
+    font-family: 'Open Sans', sans-serif; 
+    background-color: #ccc9da; 
+    
+}
+
+h1 h2 h3 h4{
+   font-family: 'Raleway', sans-serif;
+}
+
+nav  {
+    background-image: linear-gradient(to top, transparent, #fbc2eb10 0%, #a6c0eedc 100%);
+}  
+
+.responsive{
+    width: 100%;
+}
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    background: #202746b0;
+    color: #080808;    
+    padding: 0.5em;
+    border-width: medium;
+    border-style:solid ;
+    border-color: rgb(9, 32, 41);
+    -webkit-text-size-adjust: none;
+  }
+    
+  
+   
+
